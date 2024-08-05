@@ -21,16 +21,16 @@ export default function TodoForm() {
   };
 
   return (
-    <View className="space-y-2 mb-2">
+    <View className="space-y-2 mb-2 mx-2">
       <TextInput
         placeholder="title"
-        className="p-1 border-2 border-gray-300 rounded-md"
+        className="p-3 border-2 border-gray-300 rounded-md mb-2 text-lg"
         onChangeText={setTitle}
         value={title}
       />
       <TextInput
         placeholder="content"
-        className="p-1 border-2 border-gray-300 rounded-md"
+        className="p-3 border-2 border-gray-300 rounded-md text-lg "
         onChangeText={setContent}
         value={content}
       />
@@ -42,10 +42,12 @@ export default function TodoForm() {
           setContent("");
         }}
         activeOpacity={0.5}
-        underlayColor="gray"
-        className="bg-black rounded-md"
+        underlayColor="green"
+        className="bg-green-600 rounded-md p-3"
       >
-        <Text className="p-1 text-center text-white font-bold">Save</Text>
+        <Text className="p-1 text-center text-white font-bold text-lg">
+          Save
+        </Text>
       </TouchableHighlight>
     </View>
   );

@@ -18,16 +18,18 @@ export default function TodoItem({ id, title, content }: Todo) {
   };
 
   return (
-    <View className="flex flex-row my-1 items-center">
-      <Text className="w-2/6 text-center">{title}</Text>
-      <Text className="w-3/6 text-center">{content}</Text>
+    <View className="flex flex-row my-1 items-center mx-2">
+      <Text className="w-2/6 p-2 text-center text-base">{title}</Text>
+      <Text className="w-3/6 p-2 text-center text-base">{content}</Text>
       <TouchableHighlight
         onPress={() => deleteTodo(id!)}
         activeOpacity={0.5}
         underlayColor="gray"
         className="bg-red-500 rounded-md w-1/6"
       >
-        <Text className="p-1 text-center text-white font-bold">Delete</Text>
+        <Text className="p-1 text-center text-white font-bold text-base">
+          Delete
+        </Text>
       </TouchableHighlight>
     </View>
   );

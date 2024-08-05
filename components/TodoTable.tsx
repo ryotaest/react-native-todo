@@ -23,9 +23,11 @@ export default function TodoTable() {
   }, [data]);
   return (
     <>
-      <View className="flex flex-row py-2 border-b-2 border-t-2 border-b-gray-400">
-        <Text className=" w-1/3 text-center font-bold">Title</Text>
-        <Text className=" w-2/3 text-center font-bold">Content</Text>
+      <View className="flex flex-row py-2 border-b-2 border-t-2 border-b-gray-400 mx-2">
+        <Text className=" w-2/6 p-2 text-center font-bold text-lg">Title</Text>
+        <Text className=" w-3/6 p-2 text-center font-bold text-lg">
+          Content
+        </Text>
       </View>
       {isLoading ? (
         <ActivityIndicator />
